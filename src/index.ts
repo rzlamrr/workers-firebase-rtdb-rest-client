@@ -1,4 +1,4 @@
-import {Options} from './types';
+import { Options } from './types';
 
 /**
  * Represents a database obejct
@@ -75,17 +75,17 @@ export default class Database {
    * @return {boolean} If the write operation suceeded
    */
   async write(
-      location: string,
-      data: string,
-      authenticated: boolean,
-      reqHeaders?: Headers,
+    location: string,
+    data: string,
+    authenticated: boolean,
+    reqHeaders?: Headers,
   ): Promise<boolean> {
     if (this.disabled) return false;
     try {
       const res: Response = await fetch(
-        this.options.databaseUrl + location + authenticated ?
+        this.options.databaseUrl + location + ( authenticated ?
           this.authSuffix + this.options.authentication :
-          this.URL_SUFFIX,
+          this.URL_SUFFIX ),
         {
           method: 'PUT',
           headers: reqHeaders,
@@ -108,17 +108,17 @@ export default class Database {
    * @return {string} The JSON data, or an empty string for a failure
    */
   async read(
-      location: string,
-      authenticated: boolean,
-      reqHeaders?: Headers,
+    location: string,
+    authenticated: boolean,
+    reqHeaders?: Headers,
   ): Promise<string> {
     if (this.disabled) return '';
     try {
       return await (
         await fetch(
-          this.options.databaseUrl + location + authenticated ?
+          this.options.databaseUrl + location + ( authenticated ?
             this.authSuffix + this.options.authentication :
-            this.URL_SUFFIX,
+            this.URL_SUFFIX ),
           {
             method: 'GET',
             headers: reqHeaders,
@@ -139,16 +139,16 @@ export default class Database {
    * @return {boolean} If the delete operation suceeded
    */
   async delete(
-      location: string,
-      authenticated: boolean,
-      reqHeaders?: Headers,
+    location: string,
+    authenticated: boolean,
+    reqHeaders?: Headers,
   ): Promise<boolean> {
     if (this.disabled) return false;
     try {
       const res: Response = await fetch(
-        this.options.databaseUrl + location + authenticated ?
+        this.options.databaseUrl + location + ( authenticated ?
           this.authSuffix + this.options.authentication :
-          this.URL_SUFFIX,
+          this.URL_SUFFIX ),
         {
           method: 'DELETE',
           headers: reqHeaders,
@@ -171,17 +171,17 @@ export default class Database {
    * @return {boolean} If the update operation suceeded
    */
   async update(
-      location: string,
-      data: string,
-      authenticated: boolean,
-      reqHeaders?: Headers,
+    location: string,
+    data: string,
+    authenticated: boolean,
+    reqHeaders?: Headers,
   ): Promise<boolean> {
     if (this.disabled) return false;
     try {
       const res: Response = await fetch(
-        this.options.databaseUrl + location + authenticated ?
+        this.options.databaseUrl + location + ( authenticated ?
           this.authSuffix + this.options.authentication :
-          this.URL_SUFFIX,
+          this.URL_SUFFIX ),
         {
           method: 'PATCH',
           headers: reqHeaders,
@@ -206,17 +206,17 @@ export default class Database {
    * @return {boolean} If the write operation suceeded
    */
   async push(
-      location: string,
-      data: string,
-      authenticated: boolean,
-      reqHeaders?: Headers,
+    location: string,
+    data: string,
+    authenticated: boolean,
+    reqHeaders?: Headers,
   ): Promise<boolean> {
     if (this.disabled) return false;
     try {
       const res: Response = await fetch(
-        this.options.databaseUrl + location + authenticated ?
+        this.options.databaseUrl + location + ( authenticated ?
           this.authSuffix + this.options.authentication :
-          this.URL_SUFFIX,
+          this.URL_SUFFIX ),
         {
           method: 'POST',
           headers: reqHeaders,
