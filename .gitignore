@@ -6,7 +6,7 @@ package-lock.json
 .npmignore
 .npmrc
 
-dist
+#dist
 
 npm-debug.log*
 
