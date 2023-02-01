@@ -1,9 +1,9 @@
 <p align='center'>
   <img src="https://i.imgur.com/7svMXLi.png" />
 </p>
-![npm version](https://img.shields.io/npm/v/@sharks-interactive/workers-firebase-rtdb-rest-client)
-![npm downloads](https://img.shields.io/npm/dm/@sharks-interactive/workers-firebase-rtdb-rest-client)
-![npm types](https://img.shields.io/npm/types/@sharks-interactive/workers-firebase-rtdb-rest-client)
+![npm version](https://img.shields.io/npm/v/@rzlamrr/workers-firebase-rtdb-rest-client)
+![npm downloads](https://img.shields.io/npm/dm/@rzlamrr/workers-firebase-rtdb-rest-client)
+![npm types](https://img.shields.io/npm/types/@rzlamrr/workers-firebase-rtdb-rest-client)
 
 # Workers Firebase RTDB Client
 **Workers Firebase RTDB** is a [Firebase Realtime Database](https://firebase.google.com/docs/database) client library for use specifically with [Cloudflare Workers](https://developers.cloudflare.com/workers/) written in TypeScript.
@@ -17,13 +17,13 @@
 
 ## Usage:
 ```
-npm i --save @sharks-interactive/workers-firebase-rtdb-rest-client
+npm i --save @rzlamrr/workers-firebase-rtdb-rest-client
 ```
 
 ## Quick Examples:
 #### Writing Data
 ```ts
-import Database from '@sharks-interactive/workers-firebase-rtdb';
+import Database from '@rzlamrr/workers-firebase-rtdb';
 
 addEventListener('fetch', (event) => {
   const db = new Database({
@@ -48,7 +48,7 @@ addEventListener('fetch', (event) => {
 
 ### Reading Data
 ```ts
-import Database from '@sharks-interactive/workers-firebase-rtdb';
+import Database from '@rzlamrr/workers-firebase-rtdb';
 
 addEventListener('fetch', (event) => {
   const db = new Database({
